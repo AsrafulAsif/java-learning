@@ -7,6 +7,10 @@ import java.util.stream.Collectors;
 /*
 If using collection framework and change or modify the collections we need loops.
 but using stream api we can easily do that the same things without loops.
+
+--There are two types of Operations in Streams:
+   1.Intermediate Operations
+   2.Terminal Operations
  */
 
 public class JavaStreamApi {
@@ -21,7 +25,16 @@ public class JavaStreamApi {
     }
 
     public void distinctMethod(){
-        numbers = numbers.stream().distinct().collect(Collectors.toList());
+        numbers = numbers.stream()
+                .distinct()
+                .collect(Collectors.toList());
+        System.out.println(numbers);
+    }
+
+    public void filterMethod(){
+        numbers = numbers.stream()
+                .filter(number -> number % 2 == 0)
+                .collect(Collectors.toList());
         System.out.println(numbers);
     }
 }

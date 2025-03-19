@@ -5,5 +5,6 @@ public class Main {
         JavaStreamApi api = new JavaStreamApi();
         api.printNames();
         api.distinctMethod();
+        api.filterMethod();
     }
 }
